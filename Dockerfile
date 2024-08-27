@@ -7,6 +7,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN upgrade
 
 # Install packages
+# Order layer by apt-cache depends --recurse --no-recommends --no-suggests --no-conflicts --no-breaks --no-replaces --no-enhances $pkg| grep Depends | wc -l
+
 # 6
 RUN apt-get install make -y
 RUN apt-get install yasm -y
