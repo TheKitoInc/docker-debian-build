@@ -2,7 +2,7 @@ include:
   - https://github.com/TheKitoInc/docker-debian.git
 
 services:
-  kito-debian-git:
+  kito-debian-build:
     depends_on: [kito-debian]
     build: .
     image: kito-debian-build:latest
