@@ -6,25 +6,47 @@ ARG DEBIAN_FRONTEND=noninteractive
 # Run upgrade
 RUN upgrade
 
-# Install Tools
-RUN apt-get install git -y
-RUN apt-get install wget -y
-RUN apt-get install curl -y
+# Install packages
+# 6
+RUN apt-get install make -y
+RUN apt-get install yasm -y
 
-# Install Development Tools
-RUN apt-get install build-essential -y
+# 10
+RUN apt-get install ninja-build -y
 
+# 51
 RUN apt-get install autoconf -y
+
+# 53
 RUN apt-get install automake -y
 
-RUN apt-get install gcc -y
-RUN apt-get install g++ -y
+# 57
+RUN apt-get install wget -y
 
-RUN apt-get install make -y
+# 61
+RUN apt-get install pkg-config -y
+
+# 86
+RUN apt-get install texinfo -y
+
+# 96
+RUN apt-get install gcc -y
+
+# 117 
+RUN apt-get install curl -y
+
+# 143 
+RUN apt-get install git -y
+
+# 151
+RUN apt-get install meson -y
+
+# 179
 RUN apt-get install cmake -y
 
-RUN apt-get install yasm -y
-RUN apt-get install meson -y
-RUN apt-get install ninja-build -y
-RUN apt-get install pkg-config -y
-RUN apt-get install texinfo -y
+# 185
+RUN apt-get install g++ -y
+
+# 247
+RUN apt-get install build-essential -y
+
