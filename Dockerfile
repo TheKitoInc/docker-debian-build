@@ -16,6 +16,9 @@ RUN apt-get install yasm -y
 # 10
 RUN apt-get install ninja-build -y
 
+# 28
+RUN apt-get install nasm -y
+
 # 51
 RUN apt-get install autoconf -y
 
